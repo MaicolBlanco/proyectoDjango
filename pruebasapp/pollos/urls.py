@@ -1,4 +1,3 @@
-from nturl2path import url2pathname
 from django.urls import path
 
 from . import views
@@ -8,7 +7,7 @@ urlpatterns = [
     # ex: /pollos/
     path('', views.IndexView.as_view(), name='index'),
     # ex: /pollos/5/
-    path('<int:pk>/detail/pruebas_para_validar',
+    path('<int:pk>/detail/',
          views.DetailView.as_view(), name='detail'),
     # ex: /pollos/5/results
     path('<int:pk>/results/',
